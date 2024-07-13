@@ -1,0 +1,54 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://202.166.198.129:5034/jagadamba_los
+    username: jagadamba_los
+    password: jagadamba_los@123
+  data:
+    redis:
+      host: 172.30.1.27
+      port: 6379
+      password: password
+      repositories:
+        enabled: true
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+springdoc:
+  api-docs:
+    path: /kyc-loan/v1/api-docs
+  swagger-ui:
+    enabled: true
+    path: /kyc-loan/swagger-ui.html
+
+
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true
+  mapper-locations: classpath*:mapper/**/*-mapper.xml
+
+filepath: /app/uploads
+
+
+identity-four-uri-token: https://62.171.148.86:5001/
+identity-four-client-secret: 49C1A7E1-0C79-4A89-A3D6-A37998FB86B0
+identity-four-clientId: backend_client
+identity-four-grant-type: client_credentials
+identity-four-redirect-uri: http://localhost:9002/callback
+
+lms:
+  loan:
+    application:
+      url: https://62.171.148.86:7000
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://jagadamba-eureka:8761/eureka
+  instance:
+    preferIpAddress: true
