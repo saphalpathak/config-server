@@ -1,0 +1,12 @@
+spring:
+  profiles:
+    active: ${ACTIVE_SPRING_PROFILE:dev}
+  application:
+    name: kyc-loan
+
+server:
+  port: 8095
+
+logging:
+  level:
+    com.netflix.discovery: OFF
